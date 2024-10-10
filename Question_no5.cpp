@@ -8,5 +8,19 @@ int main(){
     for(i=0;i<n;i++){
         cin>>arr[i];
     }
-    max1=max2=INT_MAX;
+    max1=max2=0;
+    for(i=0;i<n;i++){
+        if(arr[i]>max1)
+        {
+          max2=max1;
+          max1=arr[i];
+        }
+        else if(arr[i]>max2){
+            max2=arr[i];
+
+        }
+    }
+    cout<<"Second Largest Element is "<<endl;
+    cout<<max2;
+
 }
